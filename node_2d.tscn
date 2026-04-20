@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dd0f7dojwfwo4"]
+
+[node name="Node2D" type="Node2D" unique_id=283983558]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1557704419]
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=2018578150]
+offset_left = -246.0
+offset_right = 246.0
+offset_bottom = 46.0
