@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dd0f7dojwfwo4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
+size = Vector2(496, 50)
+
 [node name="Node2D" type="Node2D" unique_id=283983558]
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1557704419]
@@ -8,3 +11,7 @@
 offset_left = -246.0
 offset_right = 246.0
 offset_bottom = 46.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1323957940]
+position = Vector2(0, 23)
+shape = SubResource("RectangleShape2D_y32ns")
