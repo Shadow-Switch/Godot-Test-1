@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cj701jkpjt55s"]
+
+[ext_resource type="PackedScene" uid="uid://difgkgh55ffkn" path="res://scens/bg.tscn" id="1_7lg5d"]
+[ext_resource type="PackedScene" uid="uid://cguxunongfb2i" path="res://scens/car.tscn" id="2_ulfje"]
+[ext_resource type="Script" uid="uid://b7mr7sfak8xr4" path="res://scripts/generator.gd" id="3_xahwf"]
+[ext_resource type="PackedScene" uid="uid://b8l0kl5qudbjc" path="res://scens/score.tscn" id="4_3an71"]
+
+[node name="Game" type="Node2D" unique_id=434812077]
+
+[node name="Bg" parent="." unique_id=1106469675 instance=ExtResource("1_7lg5d")]
+
+[node name="Car" parent="." unique_id=223247187 instance=ExtResource("2_ulfje")]
+position = Vector2(480, 800)
+
+[node name="Generator" type="Node" parent="." unique_id=421581967]
+script = ExtResource("3_xahwf")
+
+[node name="Timer" type="Timer" parent="Generator" unique_id=1300915528]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1118872977]
+
+[node name="Score" parent="CanvasLayer" unique_id=222777460 instance=ExtResource("4_3an71")]
+
+[connection signal="timeout" from="Generator/Timer" to="Generator" method="_on_timer_timeout"]

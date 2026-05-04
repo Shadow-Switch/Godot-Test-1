@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c1d2emf27xsw5"]
+
+[ext_resource type="Script" uid="uid://d4c38ct8bjien" path="res://scripts/gameover.gd" id="1_idi35"]
+[ext_resource type="Texture2D" uid="uid://b5icbwhjat6e4" path="res://assets/background.png" id="2_obmed"]
+[ext_resource type="Texture2D" uid="uid://ca04poyhfd8os" path="res://assets/player_car.png" id="3_b5m4k"]
+[ext_resource type="Texture2D" uid="uid://dfejeyb1ltm7x" path="res://assets/opponent_car.png" id="4_8vjxf"]
+[ext_resource type="Texture2D" uid="uid://cqvm3elm4ey0y" path="res://assets/cupcake.png" id="5_agnhm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6msol"]
+font_size = 113
+font_color = Color(0, 0, 0, 1)
+
+[node name="Gameover" type="Node2D" unique_id=1772869861]
+script = ExtResource("1_idi35")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1134196315]
+position = Vector2(512, 512)
+scale = Vector2(4, 3.9999998)
+texture = ExtResource("2_obmed")
+
+[node name="Label" type="Label" parent="." unique_id=543933768]
+offset_left = 192.0
+offset_top = 152.0
+offset_right = 836.0
+offset_bottom = 307.0
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_6msol")
+
+[node name="Button" type="Button" parent="." unique_id=1590723293]
+offset_left = 384.0
+offset_top = 736.0
+offset_right = 640.13
+offset_bottom = 834.505
+theme_override_font_sizes/font_size = 60
+text = "Restart "
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1063063403]
+position = Vector2(473.20932, 639.3599)
+rotation = 0.34906584
+scale = Vector2(7.92, 7.92)
+texture = ExtResource("3_b5m4k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1590346365]
+position = Vector2(552.2094, 583.36)
+scale = Vector2(7.92, 7.92)
+texture = ExtResource("4_8vjxf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2035354052]
+position = Vector2(512, 400)
+scale = Vector2(4, 4)
+texture = ExtResource("5_agnhm")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
