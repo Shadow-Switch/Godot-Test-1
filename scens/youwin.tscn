@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ccfaqar8hndah"]
+
+[ext_resource type="Script" uid="uid://d4c38ct8bjien" path="res://scripts/gamestart.gd" id="1_a4nu6"]
+[ext_resource type="Texture2D" uid="uid://b5icbwhjat6e4" path="res://assets/background.png" id="2_wj8ex"]
+[ext_resource type="Texture2D" uid="uid://ca04poyhfd8os" path="res://assets/player_car.png" id="3_y1efl"]
+[ext_resource type="Texture2D" uid="uid://cqvm3elm4ey0y" path="res://assets/cupcake.png" id="5_8bx4r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6msol"]
+font_size = 113
+font_color = Color(0, 0, 0, 1)
+
+[node name="Youwin" type="Node2D" unique_id=1772869861]
+script = ExtResource("1_a4nu6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1134196315]
+position = Vector2(512, 512)
+scale = Vector2(4, 3.9999998)
+texture = ExtResource("2_wj8ex")
+
+[node name="Label" type="Label" parent="." unique_id=543933768]
+offset_left = 192.0
+offset_top = 152.0
+offset_right = 836.0
+offset_bottom = 307.0
+text = "You Win!"
+label_settings = SubResource("LabelSettings_6msol")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1590723293]
+offset_left = 384.0
+offset_top = 736.0
+offset_right = 640.13
+offset_bottom = 834.505
+theme_override_font_sizes/font_size = 60
+text = "Restart "
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1063063403]
+position = Vector2(520, 536.00006)
+scale = Vector2(7.92, 7.92)
+texture = ExtResource("3_y1efl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2035354052]
+position = Vector2(512, 400)
+scale = Vector2(4, 4)
+texture = ExtResource("5_8bx4r")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

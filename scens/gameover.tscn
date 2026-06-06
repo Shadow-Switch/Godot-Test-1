@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1d2emf27xsw5"]
 
-[ext_resource type="Script" uid="uid://d4c38ct8bjien" path="res://scripts/gameover.gd" id="1_idi35"]
+[ext_resource type="Script" uid="uid://d4c38ct8bjien" path="res://scripts/gamestart.gd" id="1_idi35"]
 [ext_resource type="Texture2D" uid="uid://b5icbwhjat6e4" path="res://assets/background.png" id="2_obmed"]
 [ext_resource type="Texture2D" uid="uid://ca04poyhfd8os" path="res://assets/player_car.png" id="3_b5m4k"]
 [ext_resource type="Texture2D" uid="uid://dfejeyb1ltm7x" path="res://assets/opponent_car.png" id="4_8vjxf"]
@@ -25,6 +25,7 @@ offset_right = 836.0
 offset_bottom = 307.0
 text = "Game Over!"
 label_settings = SubResource("LabelSettings_6msol")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1590723293]
 offset_left = 384.0

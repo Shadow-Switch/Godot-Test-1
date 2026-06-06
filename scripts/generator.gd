@@ -15,3 +15,5 @@ func _on_timer_timeout():
 func _process(delta):
 	if Global.score < 0:
 		get_tree().change_scene_to_file("res://scens/gameover.tscn")
+	if Global.score > 99:
+		get_tree().change_scene_to_file("res://scens/youwin.tscn")
